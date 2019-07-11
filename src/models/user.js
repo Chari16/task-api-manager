@@ -49,9 +49,9 @@ const userSchema = new mongoose.Schema({
         }
     }]
 })
-userSchema.methods.toJSON = function () {           //works just like stringify 
+userSchema.methods.toJSON = function () {           
     const user = this
-    const userObject = user.toObject()              //convert string into Object    
+    const userObject = user.toObject()               
 
     delete userObject.password
     delete userObject.tokens
